@@ -1,0 +1,30 @@
+.input-group {
+  max-width: 600px; /* Ajusta el ancho máximo del grupo de entrada */
+  margin: 20px auto; /* Centra el grupo en la página */
+}
+
+.form-control {
+  border-radius: 0.5rem; /* Bordes redondeados */
+  transition: border-color 0.3s; /* Transición suave en el color del borde */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Color del borde al enfocar */
+  box-shadow: 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Sombra al enfocar */
+}
+
+.btn {
+  border-radius: 0.5rem; /* Bordes redondeados para el botón */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+}
+
+.bi-search {
+  font-size: 1.2rem; /* Ajusta el tamaño del ícono de búsqueda */
+  vertical-align: middle; /* Alinea verticalmente el ícono en el centro del botón */
+}
+
+

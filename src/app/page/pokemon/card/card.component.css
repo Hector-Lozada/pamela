@@ -1,0 +1,55 @@
+.row {
+    margin-top: 20px; /* Espaciado superior para la fila */
+}
+
+.flixed-card {
+    border: none; /* Sin borde en la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar el desbordamiento de la tarjeta */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.flixed-card:hover {
+    transform: translateY(-5px); /* Desplazamiento al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+.flixed-img {
+    width: 150px; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: 150px; /* Altura automática para mantener la proporción */
+    object-fit: contain;
+}
+
+.flixed-body {
+    padding: 15px; /* Espaciado interno de la tarjeta */
+    background-color: #f8f9fa; /* Fondo claro para el cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold; /* Texto en negrita para el título */
+    color: #333; /* Color del título */
+}
+
+.card-text {
+    color: #666; /* Color más suave para el texto */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+}
+
+.alert-warning {
+    background-color: #fff3cd; /* Color de fondo de la alerta */
+    border-color: #ffeeba; /* Color del borde de la alerta */
+    color: #856404; /* Color del texto de la alerta */
+}
+

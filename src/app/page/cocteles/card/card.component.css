@@ -1,0 +1,62 @@
+.row {
+    margin-bottom: 20px; /* Espacio inferior entre filas */
+}
+
+.card {
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+}
+
+.flixed-img {
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior */
+    object-fit: cover; /* Ajustar la imagen */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: contain;
+}
+
+.flixed-body {
+    background-color: #f8f9fa; /* Color de fondo para el cuerpo de la tarjeta */
+    padding: 15px; /* Espaciado interno */
+}
+
+.card-title {
+    font-weight: bold; /* Texto en negrita */
+    color: #343a40; /* Color del título */
+}
+
+.card-text {
+    color: #6c757d; /* Color gris para el texto */
+    margin: 5px 0; /* Margen entre los párrafos */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón */
+    border-color: #007bff; /* Color del borde del botón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    border-color: #0056b3; /* Color del borde al pasar el mouse */
+}
+
+.alert {
+    text-align: center; /* Centrar texto en la alerta */
+    margin-top: 20px; /* Espacio superior de la alerta */
+    font-size: 1.2rem; /* Tamaño de fuente mayor */
+    background-color: #fff3cd; /* Color de fondo de la alerta */
+    border: 1px solid #ffeeba; /* Borde de la alerta */
+    color: #856404; /* Color del texto de la alerta */
+}
+
+svg {
+    margin: auto; /* Centrar el SVG */
+    display: block; /* Mostrar como bloque */
+}

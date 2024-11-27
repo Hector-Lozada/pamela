@@ -1,0 +1,32 @@
+.pagination {
+  margin: 20px 0; /* Margen para separar la paginación del contenido */
+}
+
+.page-item {
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.page-item:hover:not(.disabled) {
+  background-color: #007bff; /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+.page-link {
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d; /* Color gris para texto deshabilitado */
+  pointer-events: none; /* Desactiva clics en elementos deshabilitados */
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0.25rem rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+.page-link {
+  font-weight: bold; /* Texto en negrita */
+}
+

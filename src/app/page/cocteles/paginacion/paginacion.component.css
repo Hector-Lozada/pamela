@@ -1,0 +1,35 @@
+.pagination {
+    margin-top: 20px; /* Espacio superior para la paginación */
+    margin-bottom: 20px; /* Espacio inferior para la paginación */
+}
+
+.page-item {
+    margin: 0 5px; /* Espaciado lateral entre elementos */
+    cursor: pointer;
+}
+
+.page-link {
+    display: inline-block; /* Mostrar como bloque en línea */
+    padding: 10px 15px; /* Espaciado interno del enlace */
+    border: 1px solid transparent; /* Borde transparente */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Color de fondo por defecto */
+    color: #007bff; /* Color del texto por defecto */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.page-link:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+    color: #0056b3; /* Color del texto al pasar el mouse */
+}
+
+.page-link.active {
+    background-color: #007bff; /* Color de fondo para la letra activa */
+    color: white; /* Color del texto para la letra activa */
+    border-color: #007bff; /* Borde del enlace activo */
+}
+
+.page-link:focus {
+    outline: none; /* Eliminar el borde de enfoque */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra de enfoque */
+}
