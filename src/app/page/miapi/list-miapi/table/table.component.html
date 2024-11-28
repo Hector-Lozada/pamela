@@ -1,55 +1,54 @@
-<div class="digimon-container">
-    <div class="header">
-      <h2>Gestión de Digimons</h2>
+<div class="barbie-container">
+  <div class="header">
+      <h2>Gestión de Barbies</h2>
       <button class="btn btn-primary" (click)="openModal()">
-        <i class="bi bi-plus-lg"> Agregar Digimon</i>
+          <i class="bi bi-plus-lg"> Agregar Barbie</i>
       </button>
-    </div>
-  
-    <table class="digimon-table">
+  </div>
+
+  <table class="barbie-table">
       <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Nivel</th>
-          <th>Tipo</th>
-          <th>Atributo</th>
-          <th>Ataques Especiales</th>
-          <th>Descripción</th>
-          <th>Acciones</th>
-        </tr>
+          <tr>
+              <th>Nombre</th>
+              <th>Colección</th>
+              <th>Tipo</th>
+              <th>Atributo</th>
+              <th>Accesorios</th>
+              <th>Descripción</th>
+              <th>Acciones</th>
+          </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let digimon of digimons">
-          <td>{{digimon.nombre}}</td>
-          <td>{{digimon.nivel}}</td>
-          <td>{{digimon.tipo}}</td>
-          <td>{{digimon.atributo}}</td>
-          <td>
-            <ul>
-              <li *ngFor="let ataque of digimon.ataquesEspeciales">
-                {{ataque}}
-              </li>
-            </ul>
-          </td>
-          <td>{{digimon.descripcion}}</td>
-          <td class="actions">
-            <button class="btn btn-primary" (click)="openModal(digimon)">
-              <i class="bi bi-pencil-square"> Editar</i>
-            </button>
-            <button class="btn btn-primary" (click)="deleteDigimon(digimon._id)">
-              <i class="bi bi-trash3-fill"> Eliminar</i>
-            </button>
-          </td>
-        </tr>
+          <tr *ngFor="let barbie of barbies">
+              <td>{{barbie.nombre}}</td>
+              <td>{{barbie.coleccion}}</td>
+              <td>{{barbie.tipo}}</td>
+              <td>{{barbie.descripcion}}</td>
+              <td>
+                  <ul>
+                      <li *ngFor="let accesorio of barbie.accesorios">
+                          {{accesorio}}
+                      </li>
+                  </ul>
+              </td>
+              <td>{{barbie.descripcion}}</td>
+              <td class="actions">
+                  <button class="btn btn-primary" (click)="openModal(barbie)">
+                      <i class="bi bi-pencil-square"> Editar</i>
+                  </button>
+                  <button class="btn btn-primary" (click)="deleteBarbie(barbie._id)">
+                      <i class="bi bi-trash3-fill"> Eliminar</i>
+                  </button>
+              </td>
+          </tr>
       </tbody>
-    </table>
-  
-    <app-digimon-modal
+  </table>
+
+  <app-barbie-modal
       *ngIf="showModal"
-      [digimon]="selectedDigimon"
+      [barbie]="selectedBarbie"
       (save)="onSave($event)"
       (cancel)="closeModal()">
-    </app-digimon-modal>
-  
-  </div>
-  
+  </app-barbie-modal>
+
+</div>

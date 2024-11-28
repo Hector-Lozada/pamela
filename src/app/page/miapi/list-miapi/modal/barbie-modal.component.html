@@ -1,0 +1,39 @@
+<div class="modal">
+  <div class="modal-content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>{{barbie ? 'Editar' : 'Crear'}} Barbie</h2>
+
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" class="form-control" formControlName="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="coleccion">Colección</label>
+        <input id="coleccion" type="text" class="form-control" formControlName="coleccion">
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <input id="tipo" type="text" class="form-control" formControlName="tipo">
+      </div>
+
+      <div class="form-group">
+        <label for="accesorios">Accesorios (uno por línea)</label>
+        <textarea id="accesorios" class="form-control" formControlName="accesorios" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" class="form-control" formControlName="descripcion" rows="4"></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+          {{barbie ? 'Actualizar' : 'Crear'}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,71 +1,68 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DigimonService } from '../services/digimon.service';
-import { Digimon } from '../interfaces/digimon.interface';
-import { DigimonModalComponent } from '../modal/digimon-modal.component';
+import { BarbieService } from '../services/barbie.service';  // Asegúrate de tener el servicio adecuado
+import { Barbie } from '../interfaces/barbie.interface';  // Importa la interfaz de Barbie
+import { BarbieModalComponent } from '../modal/barbie-modal.component';  // El componente del modal de Barbie
 
 @Component({
-    selector: 'app-digimon-table',
+    selector: 'app-barbie-table',
     standalone: true,
-    imports: [CommonModule, DigimonModalComponent],
+    imports: [CommonModule, BarbieModalComponent],
     templateUrl: './table.component.html',
     styleUrls: ['./table.component.css']
 })
-export class DigimonTableComponent implements OnInit {
-    digimons: Digimon[] = [];
+export class BarbieTableComponent implements OnInit {
+    barbies: Barbie[] = [];
     showModal = false;
-    selectedDigimon: Digimon | null = null;
+    selectedBarbie: Barbie | null = null;
 
-    constructor(private digimonService: DigimonService) { }
+    constructor(private barbieService: BarbieService) { }
 
     ngOnInit(): void {
-        this.loadDigimons();
+        this.loadBarbies();
     }
 
-    loadDigimons(): void {
-        this.digimonService.getDigimons().subscribe(
-          (response) => {
-            console.log(response); // Para verificar la estructura de la respuesta
-            this.digimons = response.digimons;  // Ajusta esta línea según la estructura
-          },
-          (error) => {
-            console.error('Error cargando los Digimons:', error);
-          }
+    loadBarbies(): void {
+        this.barbieService.getBarbies().subscribe(
+            (response) => {
+                console.log(response); // Para verificar la estructura de la respuesta
+                this.barbies = response.barbies;  // Ajusta esta línea según la estructura
+            },
+            (error) => {
+                console.error('Error cargando las Barbies:', error);
+            }
         );
-      }
-      
+    }
 
-
-
-    openModal(digimon?: Digimon): void {
-        this.selectedDigimon = digimon || null;
+    openModal(barbie?: Barbie): void {
+        this.selectedBarbie = barbie || null;
         this.showModal = true;
         console.log(this.showModal); // Para verificar si la variable se actualiza correctamente
     }
 
     closeModal(): void {
         this.showModal = false;
-        this.selectedDigimon = null;
+        this.selectedBarbie = null;
     }
 
-    onSave(digimon: Digimon): void {
-        if (digimon._id) {
-            this.digimonService.updateDigimon(digimon._id, digimon).subscribe(() => {
-                this.loadDigimons();
+    onSave(barbie: Barbie): void {
+        if (barbie._id) {
+            this.barbieService.updateBarbie(barbie._id, barbie).subscribe(() => {
+                this.loadBarbies();
                 this.closeModal();
             });
         } else {
-            this.digimonService.createDigimon(digimon).subscribe(() => {
-                this.loadDigimons();
+            this.barbieService.createBarbie(barbie).subscribe(() => {
+                this.loadBarbies();
                 this.closeModal();
             });
         }
     }
 
-    deleteDigimon(id: string): void {
-        if (confirm('¿Está seguro de eliminar este Digimon?')) {
-            this.digimonService.deleteDigimon(id).subscribe(() => {
-                this.loadDigimons();
+    deleteBarbie(id: string): void {
+        if (confirm('¿Está seguro de eliminar esta Barbie?')) {
+            this.barbieService.deleteBarbie(id).subscribe(() => {
+                this.loadBarbies();
             });
         }
     }

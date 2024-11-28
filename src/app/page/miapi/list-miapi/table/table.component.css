@@ -1,4 +1,4 @@
-.digimon-container {
+.barbie-container {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -12,25 +12,25 @@
     margin-bottom: 20px;
   }
   
-  .digimon-table {
+  .barbie-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
   }
   
-  .digimon-table th,
-  .digimon-table td {
+  .barbie-table th,
+  .barbie-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
   
-  .digimon-table th {
+  .barbie-table th {
     background-color: #f8f9fa;
     font-weight: bold;
   }
   
-  .digimon-table tr:hover {
+  .barbie-table tr:hover {
     background-color: #f5f5f5;
   }
   
